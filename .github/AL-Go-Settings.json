@@ -1,9 +1,9 @@
 {
   "type": "PTE",
   "templateUrl": "https://github.com/BusinessCentralDemos/AL-Go-PTE@main",
-    "powerPlatformSolutionFolder": "TakeOrder",
+  "powerPlatformSolutionFolder": "TakeOrder",
   "environments": [
-    "andersg (Production)",
+    "andersg (Production)"
   ],
   "DeployToAndersg": {
     "environmentName": "Sandbox",
