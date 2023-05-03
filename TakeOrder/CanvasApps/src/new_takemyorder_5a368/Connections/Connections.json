@@ -1,0 +1,88 @@
+{
+  "150e2896-54f3-405b-a1ae-bdda9e197568": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "6cb6806c-e815-4e58-8693-91bcb31c69e7": {
+          "value": "shared_dynamicssmbsaas"
+        },
+        "workflowEntityId": {
+          "value": "8b94a6d9-a3c1-ed11-83ff-000d3a991110"
+        },
+        "workflowName": {
+          "value": "d2969b09-5d18-4625-892d-43f1669bfcf5"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_dynamicssmbsaas": {
+          "value": "6cb6806c-e815-4e58-8693-91bcb31c69e7"
+        },
+        "workflowEntityId": {
+          "value": "8b94a6d9-a3c1-ed11-83ff-000d3a991110"
+        },
+        "workflowName": {
+          "value": "d2969b09-5d18-4625-892d-43f1669bfcf5"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PostBCSalesOrder"
+    ],
+    "dependencies": {
+      "shared_dynamicssmbsaas": "6cb6806c-e815-4e58-8693-91bcb31c69e7"
+    },
+    "dependents": [],
+    "id": "150e2896-54f3-405b-a1ae-bdda9e197568"
+  },
+  "6cb6806c-e815-4e58-8693-91bcb31c69e7": {
+    "connectionRef": {
+      "apiTier": "Premium",
+      "displayName": "Dynamics 365 Business Central",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1624/1.0.1624.3220/dynamicssmbsaas/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "Sandbox,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f": {
+        "dataSources": {
+          "customersWithImage (microsoft/powerApps/beta)": {
+            "tableName": "customersWithImage,microsoft%252FpowerApps%252Fbeta"
+          },
+          "itemsWithImage (microsoft/powerApps/beta)": {
+            "tableName": "itemsWithImage,microsoft%252FpowerApps%252Fbeta"
+          },
+          "localizationInformations (microsoft/powerApps/beta)": {
+            "tableName": "localizationInformations,microsoft%252FpowerApps%252Fbeta"
+          },
+          "salesOrderLines (v2.0)": {
+            "tableName": "salesOrderLines,v2.0"
+          },
+          "salesOrders (v2.0)": {
+            "tableName": "salesOrders,v2.0"
+          },
+          "takeOrderLanguageResources (microsoft/powerApps/beta)": {
+            "tableName": "takeOrderLanguageResources,microsoft%252FpowerApps%252Fbeta"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "customersWithImage (microsoft/powerApps/beta)",
+      "itemsWithImage (microsoft/powerApps/beta)",
+      "salesOrders (v2.0)",
+      "salesOrderLines (v2.0)",
+      "localizationInformations (microsoft/powerApps/beta)",
+      "takeOrderLanguageResources (microsoft/powerApps/beta)"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "150e2896-54f3-405b-a1ae-bdda9e197568"
+    ],
+    "id": "6cb6806c-e815-4e58-8693-91bcb31c69e7"
+  }
+}
