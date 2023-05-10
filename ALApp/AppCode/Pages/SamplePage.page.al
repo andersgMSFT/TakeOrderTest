@@ -1,4 +1,4 @@
-page 69000 TakeOrder_SamplePage
+page 70010 "TO - SamplePage"
 {
     PageType = Card;
     ApplicationArea = All;
@@ -9,38 +9,46 @@ page 69000 TakeOrder_SamplePage
     {
         area(Content)
         {
-            group(Tables)
+            label(Processing)
             {
-                Caption = 'Sample Tables';
-                part(PowerAppCustomers; TakeOrder_CustomerListPart)
-                {
-                    Caption = 'Customers';
-                }
+                Caption = 'This is a sample page to generate and delete data for the Take Order PowerApp';
             }
-            group(Items)
+            part(PowerAppCustomers; "TO - CustomerListPart")
             {
-                Caption = 'Menu Items';
+                Editable = false;
+                Caption = 'Tables - Customers';
+            }
 
-                part(PowerAppItems; TakeOrder_ItemListPart)
-                {
-                    Caption = 'Items';
-                }
+            part(PowerAppItems; "TO - ItemListPart")
+            {
+                Editable = false;
+                Caption = 'Restuarant - Items';
             }
         }
     }
 
     actions
     {
+        area(Promoted)
+        {
+            actionref(PromotedGenerateTestData; GenerateTestData)
+            {
+
+            }
+            actionref(PromotedDeleteTestData; DeleteTestData)
+            {
+
+            }
+        }
         area(Processing)
         {
             action(GenerateTestData)
             {
                 ApplicationArea = All;
-                Promoted = true;
                 Caption = 'Generate sample Data';
                 trigger OnAction()
                 var
-                    sampleDataGenerator: Codeunit TakeOrder_SampleDataGenerator;
+                    sampleDataGenerator: Codeunit "TO - SampleDataGenerator";
                 begin
                     sampleDataGenerator.GenerateDemoDataForPowerApps();
                 end;
@@ -48,11 +56,10 @@ page 69000 TakeOrder_SamplePage
             action(DeleteTestData)
             {
                 ApplicationArea = All;
-                Promoted = true;
                 Caption = 'Delete sample Data';
                 trigger OnAction()
                 var
-                    sampleDataGenerator: Codeunit TakeOrder_SampleDataGenerator;
+                    sampleDataGenerator: Codeunit "TO - SampleDataGenerator";
                 begin
                     sampleDataGenerator.DeleteDemoDataForPowerApps();
                 end;
