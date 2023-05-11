@@ -53,23 +53,6 @@ codeunit 70011 "TO - SampleDataGenerator"
         AddItem('P0005', 'Lemon tart', 'food', 'Lactose, gluten', 'Pastry base with lemon curd topped with meringue', 4.00, ItemImages.P0005_LemonTart());
         AddItem('P0006', 'Blueberry pie', 'food', 'Nuts, lactose, gluten', 'Hazelnut pie base with Finnish blueberry, vanilla cream, milk chocolate and mint', 4.00, ItemImages.P0006_BlueberryPie());
 
-        AddItemUnitOfMeasure('W0001');
-        AddItemUnitOfMeasure('W0002');
-        AddItemUnitOfMeasure('W0003');
-        AddItemUnitOfMeasure('W0004');
-        AddItemUnitOfMeasure('W0005');
-        AddItemUnitOfMeasure('C0001');
-        AddItemUnitOfMeasure('C0002');
-        AddItemUnitOfMeasure('C0003');
-        AddItemUnitOfMeasure('C0004');
-        AddItemUnitOfMeasure('C0005');
-        AddItemUnitOfMeasure('P0001');
-        AddItemUnitOfMeasure('P0002');
-        AddItemUnitOfMeasure('P0003');
-        AddItemUnitOfMeasure('P0004');
-        AddItemUnitOfMeasure('P0005');
-        AddItemUnitOfMeasure('P0006');
-
         Message('Demo data generated');
     end;
 
@@ -96,11 +79,11 @@ codeunit 70011 "TO - SampleDataGenerator"
         ItemRecord.Validate("Gen. Prod. Posting Group", GenProdPostingGroup.Code);
         ItemRecord.Validate("Tax Group Code", TaxGroupCode.Code);
         ItemRecord.Validate(SoldInRestaurant, true);
-        itemRecord.Validate("Base Unit of Measure", 'PCS');
 
         AddImageToItem(ItemPicture, ItemRecord);
-
         ItemRecord.Insert(true);
+
+        AddItemUnitOfMeasure(ItemNumber);
     end;
 
     procedure AddCustomer(CustomerName: Text)
