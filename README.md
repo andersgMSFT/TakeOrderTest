@@ -2,7 +2,7 @@
 
 The **Take Order** sample demonstrates how you can build a customized user experience for servers at restaurants, using Power Apps powered by Business Central.
 
-The app allows servers to seat guests at a table and provides an intuitive UI for easily taking their orders. The sample includes a Business Central extension, a Power App, and a Power Automate flow. The extension add the appripriate APIs and extends the items and customer tables with the following fields:
+The app allows servers to seat guests at a table and provides an intuitive UI for easily taking their orders. The sample includes a Business Central extension, a Power App, and a Power Automate flow. The extension adds the appropriate APIs and extends the items and customer tables with the following fields:
 
 **Items**
 - *SoldInRestaurant*: Indicates if the item should appear in the app
