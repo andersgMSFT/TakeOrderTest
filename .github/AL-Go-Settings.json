@@ -3,7 +3,7 @@
   "templateUrl": "https://github.com/BusinessCentralDemos/AL-Go-PTE@main",
   "powerPlatformSolutionFolder": "TakeOrder",
   "environments": [
-    "andersg",
+    "andersg"
   ],
   "DeployToAndersg": {
     "environmentName": "PowerApps",
